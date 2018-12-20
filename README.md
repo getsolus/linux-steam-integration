@@ -5,7 +5,7 @@ Linux Steam* Integration is a helper system to make the Steam Client and Steam
 games run better on Linux. In a nutshell, LSI automatically applies various workarounds
 to get games working, and fixes long standing bugs in both games and the client.
 
-![screenshot](https://raw.githubusercontent.com/solus-project/linux-steam-integration/master/.github/LSI_Settings.png)
+![screenshot](https://raw.githubusercontent.com/clearlinux/linux-steam-integration/master/.github/LSI_Settings.png)
 
 In many cases this will involve controlling which libraries are allowed to be used
 at any given time, and these libraries may be overriden for any of the following
@@ -15,12 +15,12 @@ reasons:
  - Compatibility
  - Performance
 
+This project, and by extension the platforms it runs on, are not officially endorsed by, or affiliated with, Steam, or its parent company, Valve*.
+This fork of linux-steam-integration is now being maintained separately from the original project, to suit the cadence and requirements of the
+Clear Linux* Project for Intel Architecture.
 
-This project, and by extension Solus, is not officially endorsed by, or affiliated with, Steam, or its parent company, Valve*.
-
-Linux Steam Integration is a [Solus project](https://solus-project.com/)
-
-![logo](https://build.solus-project.com/logo.png)
+This project will retain backwards compatibility with the original project at the time of forking to alleviate maintainer concerns, whilst focusing
+on improvements to match a wider audience than the original project, and ensuring native runtimes continue to work unimpeded.
 
 ### Linking compatibility
 
@@ -69,40 +69,13 @@ modules, `liblsi-redirect.so` and `liblsi-intercept.so`, to dynamically apply al
 workarounds at runtime, which in turn is set up by the main LSI `shim` binary.
 
 For a more in depth view of what LSI is, and how to integrate it into your distribution,
-please check the [technical README document](https://github.com/solus-project/linux-steam-integration/blob/master/TECHNICAL.md).
-
-Be advised that we intend to remove the need for distributions to integrate LSI in the near future, by providing
-the LSI system as a [snap](https://snapcraft.io/) package for all supported distributions.
-
-## Getting LSI
-
-LSI may not yet be available for your distribution, however some community maintained repositories do exist.
-
- - [Arch Linux](https://aur.archlinux.org/packages/linux-steam-integration/)
- - [Fedora](https://copr.fedorainfracloud.org/coprs/alunux/linux-steam-integration/)
- - Solus uses LSI by default, just install the `steam` package.
-
-To install the experimental snaps (`snapd` >= 2.29.4):
-
-    sudo snap install --edge solus-runtime-gaming
-    sudo snap install --devmode --edge linux-steam-integration
-
-## Snap Support
-
-LSI is currently undergoing work to become a universal package for all Linux distributions!
-
-Items left to implement:
-
- - [x] Add basic library support for snapd environment
- - [x] Make `shim` support `$SNAP` style environmental variables for local Steam
- - [x] Add support to LSI + `snapd` for NVIDIA+Vulkan
- - [ ] Verify "normal" games work again
- - [x] Publish snaps (edge)
+please check the [technical README document](https://github.com/clearlinux/linux-steam-integration/blob/master/TECHNICAL.md).
 
 
 ## License
 
-Copyright © 2016-2017 Ikey Doherty
+Copyright © 2016-2018 Ikey Doherty
+Copyright © 2018 Intel Corporation
 
 linux-steam-integration is available under the terms of the `LGPL-2.1` license.
 

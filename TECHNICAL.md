@@ -270,13 +270,7 @@ If you are noticing performance regressions, you can:
  - As a packager: Disable `liblsi-intercept` via build flags. This will hurt compatibility.
  - As a distribution integrator: Add weight to upstream issue and import patch into your distribution.
    This will retain LSI compatibility magic and mitigate performance issues.
-   As an example, Solus has already [integrated the patch](https://dev.solus-project.com/R927:afa5b639e8a9b62618457a304d1e6fb42a9f2066).
-
-The long term solution is to remove this burden from non-Solus Linux distributions, and for the Solus & LSI projects to
-provide a specialised runtime & strict LSI build via third party mechanisms so that all this work only needs doing once.
-This will help ensure the same gaming experience regardless of Linux distribution, remove all compatibility issues, and
-any pressures on distributions. Additionally this will allow even distributions not supporting multilib to provide a
-curated and well integrated gaming runtime.
+   As an example, Solus has already [integrated the patch](https://dev.getsol.us/R927:afa5b639e8a9b62618457a304d1e6fb42a9f2066).
 
 
 `* Some names may be claimed as the property of others.`

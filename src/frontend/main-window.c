@@ -114,7 +114,7 @@ static void lsi_settings_window_init(LsiSettingsWindow *self)
                 lsi_config_load_defaults(&self->config);
         }
 
-                /* Conditionally apply CSD */
+        /* Conditionally apply CSD */
 #if GTK_CHECK_VERSION(3, 12, 0)
         xdg_desktop = g_getenv("XDG_CURRENT_DESKTOP");
         if (xdg_desktop && (strstr(xdg_desktop, "GNOME:") || strstr(xdg_desktop, ":GNOME") ||

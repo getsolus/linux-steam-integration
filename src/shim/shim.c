@@ -27,12 +27,6 @@
 #include "shim.h"
 
 /**
- * Required to force Steam into 32-bit detection mode, which is useful for
- * recent issues like the CS:GO 64-bit update with huge FPS drops
- */
-#define EMUL32BIN "linux32"
-
-/**
  * Audit path is used for the libintercept library to ensure Steam only uses the
  * host SDL, etc.
  */
@@ -343,22 +337,24 @@ bool shim_bootstrap()
 static int shim_execute_internal(const char *command, int argc, char **argv, bool use_path)
 {
         bool is_x86_64;
-        const char *n_argv[argc + 3];
+        const char *n_argv[argc + 5];
         const char *exec_command = NULL;
         int i = 1;
         int8_t off = 1;
         int (*vfunc)(const char *, char *const argv[]) = NULL;
 
         is_x86_64 = lsi_system_is_64bit();
-        memset(&n_argv, 0, sizeof(char *) * (argc + 3));
+        memset(&n_argv, 0, sizeof(char *) * (argc + 5));
 
-        /* If we're 64-bit and 32-bit is forced, proxy via linux32 */
+        /* If we're 64-bit and 32-bit is forced, proxy via setarch linux32 */
         if (lsi_config.force_32 && is_x86_64) {
-                exec_command = EMUL32BIN;
-                n_argv[0] = EMUL32BIN;
-                n_argv[1] = command;
-                off = 2;
-                /* Use linux32 in the path */
+                exec_command = "setarch";
+                n_argv[0] = "setarch";
+                n_argv[1] = "linux32";
+                n_argv[2] = "--";
+                n_argv[3] = command;
+                off = 4;
+                /* Use setarch in the path */
                 vfunc = execvp;
         } else {
                 /* Directly call lsi_exec_bin */

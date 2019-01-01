@@ -196,7 +196,7 @@ Currently this INI file supports three options. The root section in this INI fil
 `force-32bit = $boolean`
 
         If set to a true boolean value (yes/true/on), the shadowed Steam binary will
-        be run via the `linux32` command. This will force the `steam` process
+        be run via the `setarch linux32` command. This will force the `steam` process
         and all children to believe they are running on a 32-bit system. This
         may be useful for 64-bit games that are buggy only on 64-bit.
 

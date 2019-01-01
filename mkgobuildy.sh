@@ -2,7 +2,8 @@
 set -e
 
 if [[ ! -d buildroot/build32 ]]; then
-    CC="gcc -m32" linux32 meson buildroot/build32 -Dwith-libressl-mode=shim --prefix=/usr --sysconfdir=/etc --datadir=/usr/share --libdir=/usr/lib32 -Dwith-shim=none -Dwith-new-libcxx-abi=true --buildtype debugoptimized
+    ASFLAGS="$ASFLAGS --32" CFLAGS="$CFLAGS -m32" CXXFLAGS="$CXXFLAGS -m32" LDFLAGS="$LDFLAGS -m32" \
+    meson buildroot/build32 -Dwith-libressl-mode=shim --prefix=/usr --sysconfdir=/etc --datadir=/usr/share --libdir=/usr/lib32 -Dwith-shim=none -Dwith-new-libcxx-abi=true --buildtype debugoptimized
 fi
 
 if [[ ! -d buildroot/build64 ]]; then

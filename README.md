@@ -76,7 +76,7 @@ please check the [technical README document](https://github.com/clearlinux/linux
 
 Copyright © 2016-2018 Ikey Doherty
 
-Copyright © 2018 Intel Corporation
+Copyright © 2018-2019 Intel Corporation
 
 linux-steam-integration is available under the terms of the `LGPL-2.1` license.
 

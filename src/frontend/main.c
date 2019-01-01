@@ -1,7 +1,8 @@
 /*
  * This file is part of linux-steam-integration.
  *
- * Copyright © 2016-2017 Ikey Doherty <ikey@solus-project.com>
+ * Copyright © 2016-2018 Ikey Doherty <ikey@solus-project.com>
+ * Copyright © 2018-2019 Intel Corporation
  *
  * linux-steam-integration is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public License as

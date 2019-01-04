@@ -1,7 +1,10 @@
 Initial test list for next release of LSI
 
  - DOTA 2
- - Don't Starve Together (Requires curl-gnutls - CLR test pending)
+ - Don't Starve Together
+        - Requires curl-gnutls (integrating into CLR now)
+        - Vendored SDL somehow makes input work properly. Investigate diff
+          between host SDLs and vendored SDL for this case.
  - Cities:Skylines
  - Various Source titles (L4D2, Portal, etc)
  - Various Feral titles (2018/2019 kits)

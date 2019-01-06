@@ -3,8 +3,9 @@ Initial test list for next release of LSI
  - DOTA 2
  - Don't Starve Together
         - Requires curl-gnutls (integrating into CLR now)
-        - Vendored SDL somehow makes input work properly. Investigate diff
-          between host SDLs and vendored SDL for this case.
+        - Vendored SDL is patched in non upstreamable fashion
+          https://forums.kleientertainment.com/forums/topic/30218-crash-on-linux-steam-without-error/?page=0&tab=comments#comment-386249
+          We'll need to allow certain games to vendor SDL now.
  - Cities:Skylines
  - Various Source titles (L4D2, Portal, etc)
  - Various Feral titles (2018/2019 kits)

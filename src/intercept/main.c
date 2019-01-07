@@ -119,7 +119,14 @@ static const char *vendor_blacklist[] = {
 
         /* Ensure we don't match weird made up cruft like "libSDL2_locale" */
         "libSDL-1.2",
+
+#if UINTPTR_MAX == 0xffffffffffffffff
+        /* Only blacklist SDL on native 64-bit builds
+         * 32-bit builds tend to do weird stuff, like ship incompatible
+         * patched builds of libSDL (Don't Starve, for example)
+         */
         "libSDL2-2",
+#endif
         "libSDL2_ttf",
         "libSDL_ttf",
         "libSDL2_image",

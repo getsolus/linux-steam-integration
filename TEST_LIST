@@ -7,6 +7,7 @@ Initial test list for next release of LSI
           https://forums.kleientertainment.com/forums/topic/30218-crash-on-linux-steam-without-error/?page=0&tab=comments#comment-386249
           We'll need to allow certain games to vendor SDL now.
           Fixed in https://github.com/clearlinux/linux-steam-integration/commit/c4ded161159d2d6faa5a1dba45af8426738632b7
+ - Oxygen Not Included (working perfectly)
  - Cities:Skylines
  - Various Source titles (L4D2, Portal, etc)
  - Various Feral titles (2018/2019 kits)

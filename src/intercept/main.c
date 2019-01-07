@@ -406,14 +406,15 @@ static bool lsi_override_x86_derp(const char *orig_name, const char **soname)
             orig_name,
             path_lookup);
         return true;
+}
 #else
 static bool lsi_override_x86_derp(__lsi_unused__ const char *orig_name,
                                   __lsi_unused__ const char **soname)
 {
         /* Don't perform x86 translation on 32-bit machines */
         return false;
-#endif
 }
+#endif
 
 /**
  * Internal helper for path replacement to host lib

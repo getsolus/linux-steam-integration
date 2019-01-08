@@ -20,5 +20,6 @@ if with_frontend == true
             link_lsi,
         ],
         install: true,
+        install_dir: path_bindir,
     )
 endif

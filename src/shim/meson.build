@@ -29,6 +29,7 @@ if shim_behaviour != 'none'
             link_lsi,
         ],
         install: true,
+        install_dir: path_bindir,
     )
 
     lsi_exec = executable(
@@ -39,5 +40,6 @@ if shim_behaviour != 'none'
             link_lsi,
         ],
         install: true,
+        install_dir: path_bindir,
     )
 endif

@@ -1,4 +1,4 @@
-appsdir = join_paths(datadir, 'applications')
+path_appsdir = join_paths(path_datadir, 'applications')
 
 # If frontend is enabled, install lsi-settings.desktop
 if with_frontend == true
@@ -12,7 +12,7 @@ if with_frontend == true
         input: 'lsi-settings.desktop.in',
         output: 'lsi-settings.desktop',
         configuration: data_conf,
-        install_dir: appsdir,
+        install_dir: path_appsdir,
     )
 endif
 
@@ -20,6 +20,6 @@ endif
 if shim_behaviour == 'co-exist'
     install_data(
         'lsi-steam.desktop',
-        install_dir: appsdir,
+        install_dir: path_appsdir,
     )
 endif

@@ -49,7 +49,8 @@ cdata.set_quoted('LOCALEDIR', path_localedir)
 cdata.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 
 # Configurables
-cdata.set_quoted('LSI_PRELOAD_LIBS', get_option('with-preload-libs'))
+with_preload_libs = get_option('with-preload-libs')
+cdata.set_quoted('LSI_PRELOAD_LIBS', with_preload_libs)
 cdata.set_quoted('STEAM_BINARY', get_option('with-steam-binary'))
 
 # Future reports
@@ -67,6 +68,7 @@ if shim_behaviour != 'none'
     shim_enabled = true
 endif
 shim_system_report += '    behaviour:                              @0@'.format(shim_behaviour)
+shim_system_report += '    preload libraries:                      @0@'.format(with_preload_libs)
 
 # Do we have liblsi-intercept?
 with_libintercept = get_option('with-libintercept')

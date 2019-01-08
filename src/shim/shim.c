@@ -31,14 +31,14 @@
  * Audit path is used for the libintercept library to ensure Steam only uses the
  * host SDL, etc.
  */
-#define AUDIT_PATH "/usr/\$LIB/liblsi-intercept.so"
+#define AUDIT_PATH "/usr/$LIB/liblsi-intercept.so"
 
 /**
  * Redirect path is used for the libredirect library to perform internal
  * redirections in functions like `open()` where needed to hotfix games
  * at runtime.
  */
-#define REDIRECT_PATH "/usr/\$LIB/liblsi-redirect.so"
+#define REDIRECT_PATH "/usr/$LIB/liblsi-redirect.so"
 
 /**
  * Potential for the host Vulkan ICD files (old vs new)

@@ -1,6 +1,26 @@
 linux-steam-integration
 -----------------------
 
+### Notice
+
+Due to work commitments the ramp up for this project is planned for WW04, starting
+Monday 21st January. Basic plan involves:
+
+ - Adding a hybrid shim mode. This will automatically install Steam if it is
+   missing to enable any distro to ship LSI. We will of course then need to
+   ship udev rules with this mode enabled. This will not conflict with existing
+   modes.
+ - Add missing Proton support (much needed!)
+ - Refactor the two modules to be more extensible and get a boatload of games
+   working.
+ - Enable GitHub issue tracker.
+
+There is of course more planned, so for now we'll put out an interim maintenance
+release to fix some annoying bugs, such as Don't Starve not working correctly.
+
+
+
+
 Linux Steam* Integration is a helper system to make the Steam Client and Steam
 games run better on Linux. In a nutshell, LSI automatically applies various workarounds
 to get games working, and fixes long standing bugs in both games and the client.

@@ -18,7 +18,7 @@ Monday 21st January. Basic plan involves:
 There is of course more planned, so for now we'll put out an interim maintenance
 release to fix some annoying bugs, such as Don't Starve not working correctly.
 
-
+Edit: This happened later than planned due to illness.
 
 
 Linux Steam* Integration is a helper system to make the Steam Client and Steam

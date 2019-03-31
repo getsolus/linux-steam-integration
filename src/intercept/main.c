@@ -148,7 +148,7 @@ static const char *vendor_blacklist[] = {
 
         /* glews (provide glew + glew110 in your distro for full compat) */
         "libGLEW.so.1.10",
-        "libGLEW.so.1.12",
+        "libGLEW.so.2.1",
 
         /* libglu has stable soname */
         "libGLU.so.",

@@ -1,11 +1,4 @@
-linux-steam-integration
------------------------
-
-### Notice
-
-Awaiting laptop with actual GPU. Order in place. Stay tuned.
-
- - ikey
+# linux-steam-integration
 
 Linux Steam* Integration is a helper system to make the Steam Client and Steam
 games run better on Linux. In a nutshell, LSI automatically applies various workarounds
@@ -28,7 +21,7 @@ Clear Linux* Project for Intel Architecture.
 This project will retain backwards compatibility with the original project at the time of forking to alleviate maintainer concerns, whilst focusing
 on improvements to match a wider audience than the original project, and ensuring native runtimes continue to work unimpeded.
 
-### Linking compatibility
+## Linking compatibility
 
 With LSI, you don't need to worry any more about manually mangling your Steam installation
 just to make the open source drivers work, or manually creating links and installing
@@ -41,8 +34,7 @@ vendored libraries. This will help with many launch failures involving outdated
 libraries, or indeed the infamous `libstdc++.so.6` vendoring which breaks open
 source graphics drivers on systems compiled with the new GCC C++ ABI.
 
-
-### Apply path based hotfixes to games
+## Apply path based hotfixes to games
 
 The redirect module contains some profiles to allow us to dynamically fix some
 issues that would otherwise require new builds of the games to see those issues
@@ -51,7 +43,7 @@ resolved.
  - Project Highrise: Ensure we don't `mmap` a directory as a file (fixes invalid prefs path)
  - ARK Survival Evolved: Use the correct shader asset from TheCenter DLC to fix broken water surfaces.
 
-### Unity3D Black Screen Of Nope
+## Unity3D Black Screen Of Nope
 
 Older builds of Unity3D had (long since fixed) issues with launching to a black
 screen when defaulting to full screen mode. This is commonly addressed by launching the
@@ -68,7 +60,7 @@ Net result - all Unity3D games using this pref path (the older generation) will 
 in windowed mode always. They can be fullscreened from inside the game, and this will
 help with making sure games **actually launch**.
 
-### Notes
+## Notes
 
 Note that LSI will not modify your Steam installation, and instead makes use of two
 modules, `liblsi-redirect.so` and `liblsi-intercept.so`, to dynamically apply all of the
@@ -80,9 +72,7 @@ please check the [technical README document](https://github.com/clearlinux/linux
 
 ## License
 
-Copyright © 2016-2018 Ikey Doherty
-
-Copyright © 2018-2019 Intel Corporation
+Copyright © 2016-2019 Solus Project
 
 linux-steam-integration is available under the terms of the `LGPL-2.1` license.
 

@@ -91,6 +91,7 @@ static const char *steam_allowed[] = {
 
         /* steamwebhelper */
         "libcef.so",
+        "libbz2.so.1.0.6",
 
         /* Swift shader */
         "libGLESv2.so",
@@ -282,7 +283,7 @@ static const char *vendor_transmute_source[] = {
         "libcurl-gnutls.so.3",
         "libcurl.so.3",
 
-        "libbz2.so.1.0",
+        "libbz2.so.1.0.6",
 
         "libudev.so.0",
 };

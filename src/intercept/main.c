@@ -90,6 +90,9 @@ static const char *steam_allowed[] = {
         "libpango-1.0.so",
         "libpangocairo-1.0.so",
 
+        /* steamvr */
+        "vrclient.so",
+  
         /* steamwebhelper */
         "libcef.so",
         "libbz2.so.1.0.6",

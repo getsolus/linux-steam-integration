@@ -104,6 +104,9 @@ static const char *steam_allowed[] = {
         /* widevine */
         "libwidevinecdmadapter.so",
         "libwidevinecdm.so",
+
+        /* temporary SDL3 fix */
+        "libSDL3.so",
 };
 
 static const char *wanted_steam_processes[] = {

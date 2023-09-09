@@ -201,7 +201,7 @@ void lsi_config_load_defaults(LsiConfig *config)
         /* Very simple right now, but in future we'll expand the options and
          * things that LSI knows about */
         config->force_32 = false;
-        config->use_native_runtime = true;
+        config->use_native_runtime = false;
         config->use_libintercept = true;
         config->use_libredirect = true;
         config->use_unity_hack = true;

@@ -147,6 +147,9 @@ static const char *vendor_blacklist[] = {
         "libSDL2_gfx",
         "libSDL_gfx",
 
+        /* source 1 bundled version is bork on modern ABI */
+        "libtcmalloc_minimal.so.4",
+
         /* vendor-owned */
         "libz.so.1",
         "libfreetype.so.6",
